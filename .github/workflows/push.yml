@@ -4,8 +4,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
- workflow_dispatch:
-
 name: CI
 jobs:
   docker:
@@ -22,7 +20,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          
+
       - name: Build and (not) push
         uses: docker/build-push-action@v5
         with:
