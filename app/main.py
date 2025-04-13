@@ -15,4 +15,4 @@ def sumar_numeros(data: SumaInput):
 
 import os
 
-print(f'Hola esta es la ejecucion correcta... {os.getenv('USERNAME')}')
+print(f"Hola esta es la ejecucion correcta... {os.getenv('USERNAME')}")
