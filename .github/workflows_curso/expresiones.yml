@@ -1,0 +1,29 @@
+name: Expresiones
+
+run-name: ¡Hola Espresiones!
+on: 
+  workflow_dispatch:
+    inputs:
+      edad:
+        desciption: 'Edad'
+        required: true
+        type: integer
+      nombre: 
+        description: 'Nombre'
+        required: true
+        default: 'Andres'
+        type: string
+
+jobs:
+  mayor:
+    if: ${{inputs.edad >= 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Corre Script
+        run: echo ${{inputs.nombre}} es mayor de edad
+  menor:
+    if: ${{inputs.edad < 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Corre Script menor
+        run: echo ${{inputs.nombre}} es menor de edad
