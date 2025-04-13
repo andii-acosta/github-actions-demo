@@ -43,3 +43,7 @@ jobs:
         - name: Build Docker image
           run: |
             docker build -t andresacos29/api-demo-actions .
+
+        - name: Build Docker push image
+          run: |
+            docker push andresacos29/api-demo-actions
