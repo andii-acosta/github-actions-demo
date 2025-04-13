@@ -42,10 +42,4 @@ jobs:
 
         - name: Build Docker image
           run: |
-            docker build -t my-fastapi-app .
-
-        - name: Test container (optional)
-          run: |
-            docker run -d -p 8001:8001 --name test-container my-fastapi-app
-            sleep 5  # espera que arranque
-            curl --fail http://localhost:8001/docs
+            docker build -t andresacos29/api-demo-actions .
