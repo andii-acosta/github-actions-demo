@@ -1,8 +1,9 @@
 name: "integration_main"
 run-name: "Integracion test - CI"
 
-on: [push, pull_request]
-  branches: ["dev"]
+on:
+  push:
+    branches: [ "dev" ]
 
 jobs:
   test:
