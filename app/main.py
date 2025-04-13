@@ -1,4 +1,4 @@
-"""from fastapi import FastAPI
+from fastapi import FastAPI
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -11,8 +11,4 @@ class SumaInput(BaseModel):
 def sumar_numeros(data: SumaInput):
     resultado = data.a + data.b
     print(resultado)
-    return {"resultado": resultado}"""
-
-import os
-
-print(f"Hola esta es la ejecucion correcta... {os.getenv('USERNAME')}")
+    return {"resultado": resultado}
